@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Registration </title></head>
+    <h1>Registration results</h1>
+    <body>{% with messages = get_flashed_messages() %}
+            {% if messages %}
+              {% for message in messages %}
+                <p>{{message}}</p>
+              {% endfor %}
+            {% endif %}
+          {% endwith %}
+          <li>Email:{{context.email}}</li>
+          <li>First Name:{{context.first_name}}</li>
+          <li>Last Name:{{context.last_name}}</li>
+          <li>Password:{{context.password}}</li>
+          <li>Confirm Password:{{context.c_password}}</li>
+          
+        
+    </body>
+</html>
